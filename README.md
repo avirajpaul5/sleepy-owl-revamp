@@ -12,7 +12,7 @@ Requirements
 Getting Started
 ---------------
 Clone the Repository:
-  git clone https://github.com/your-username/your-repo-name.git
+  git clone https://github.com/aparupganguly/SleepyOwlRevamp.git
   cd your-repo-name
 
 Install Dependencies:
@@ -32,7 +32,7 @@ Building for Production:
 
 Contributing
 ------------
-Submit issues and pull requests.
+Closed. 
 
 License
 -------

@@ -1,0 +1,10 @@
+.heroContainer {
+  line-height: 1;
+  height: 20vh;
+  color: #5d5d5d;
+  font-weight: 100;
+  text-align: center;
+  font-size: 35vw;
+  letter-spacing: 0.05em;
+  font-family: "Robson-medium";
+}
