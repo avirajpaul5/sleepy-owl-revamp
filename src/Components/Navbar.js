@@ -2,7 +2,7 @@ import React from 'react'
 import "../Styles/Navbar.css"
 const Navbar = () => {
   return (
-    <div>agar nahi banaya to ?</div>
+    <div>Navbar Goes Here! </div>
   )
 }
 
