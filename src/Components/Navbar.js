@@ -1,8 +1,8 @@
 import React from 'react'
-
+import "../Styles/Navbar.css"
 const Navbar = () => {
   return (
-    <div>Navbar Adi Banayega!</div>
+    <div>agar nahi banaya to ?</div>
   )
 }
 
