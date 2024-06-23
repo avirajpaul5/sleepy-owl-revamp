@@ -1,9 +1,3 @@
-body {
-  background-color: #111111;
-  color: #e0e0e0;
-  margin: 0;
-}
-
 /* Custom ScrollBar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -24,9 +18,6 @@ body {
   cursor: default !important;
 }
 /* Custom ScrollBar Ends */
-
-
-
 
 /* Robson Font Family */
 @font-face {
@@ -62,3 +53,33 @@ body {
   src: url("./assets/fonts/Robson/robson-bold.otf") format("opentype");
 }
 /* Robson Font Family */
+
+/* Neue Font Family */
+@font-face {
+  font-family: "Neue-black";
+  src: url("./assets/fonts/Neue/NeueHaasDisplayBlack.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Neue-bold";
+  src: url("./assets/fonts/Neue/NeueHaasDisplayBold.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Neue-medium";
+  src: url("./assets/fonts/Neue/NeueHaasDisplayMedium.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Neue-light";
+  src: url("./assets/fonts/Neue/NeueHaasDisplayLight.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Neue-55roman";
+  src: url("./assets/fonts/Neue/NeueHaasDisplayRoman.ttf") format("opentype");
+}
+
+/* Neue Font Family */
+body {
+  background-color: #111111;
+  color: #e0e0e0;
+  margin: 0;
+  overflow-x: hidden;
+}

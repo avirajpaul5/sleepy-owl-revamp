@@ -2,7 +2,7 @@ import React from 'react'
 import "../Styles/Navbar.css"
 const Navbar = () => {
   return (
-    <div>Navbar Goes Here! </div>
+    <div className ="navbarContainer">Navbar Goes Here! </div>
   )
 }
 

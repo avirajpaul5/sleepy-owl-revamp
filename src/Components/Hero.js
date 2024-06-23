@@ -19,20 +19,36 @@ const Hero = () => {
   const textSpansRef = useRef([]);
 
   useEffect(() => {
+
+    gsap.from(".heroContainer", {
+      duration: 2.5,
+      ease: "power4",
+      y: 100,
+      opacity: 0,
+      delay: 0.5,
+      stagger: 0.3,
+    });
+
+
+
+
+
+
+
     gsap.set(cursorRef.current, {
       xPercent: 0,
-      yPercent: 0,
-      scale: 0.5,
+      yPercent: -1,
+      scale: 1,
     });
 
     const setCursorX = gsap.quickTo(cursorRef.current, "x", {
       duration: 0.6,
-      ease: "expo"
+      ease: "expo",
     });
 
     const setCursorY = gsap.quickTo(cursorRef.current, "y", {
       duration: 0.6,
-      ease: "expo"
+      ease: "expo",
     });
 
     const handleMouseMove = (e) => {
@@ -43,14 +59,14 @@ const Hero = () => {
     window.addEventListener("mousemove", handleMouseMove);
 
     const tl = gsap.timeline({
-      paused: true
+      paused: true,
     });
 
     tl.to(cursorRef.current, {
       scale: 1,
       opacity: 1,
       duration: 0.5,
-      ease: "expo.inOut"
+      ease: "expo.inOut",
     });
 
     textSpansRef.current.forEach((textSpan, i) => {
@@ -79,14 +95,59 @@ const Hero = () => {
   return (
     <>
       <div className="cursor" ref={cursorRef}>
-        {[Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8, Img9].map((imgSrc, i) => (
-          <img key={i} src={imgSrc} alt={`Cursor ${i}`} ref={el => cursorMediasRef.current[i] = el} />
+        {[
+          Img1,
+          Img2,
+          Img3,
+          Img4,
+          Img5,
+          Img6,
+          Img7,
+          Img8,
+          Img9,
+          Img1,
+          Img2,
+          Img3,
+          Img4,
+          Img5,
+        ].map((imgSrc, i) => (
+          <img
+            key={i}
+            src={imgSrc}
+            alt={`Cursor ${i}`}
+            ref={(el) => (cursorMediasRef.current[i] = el)}
+          />
         ))}
       </div>
       <div className="heroContainer">
-        {['S', 'L', 'E', 'E', 'P', 'Y', 'O', 'W', 'L'].map((char, i) => (
-          <span key={i} className="textSpan" ref={el => textSpansRef.current[i] = el}>{char}</span>
+        {[
+          "S",
+          "L",
+          "E",
+          "E",
+          "P",
+          "Y",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          "O",
+          "W",
+          "L",
+        ].map((char, i) => (
+          <span
+            key={i}
+            className="textSpan"
+            ref={(el) => (textSpansRef.current[i] = el)}
+          >
+            {char}
+          </span>
         ))}
+      </div>
+      <div className="shopButtonsContainer">
+        <p style={{ textDecoration: "underline" }}>Shop Now</p>
+        <p>Scroll Down </p>
       </div>
     </>
   );
