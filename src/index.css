@@ -75,8 +75,15 @@
   font-family: "Neue-55roman";
   src: url("./assets/fonts/Neue/NeueHaasDisplayRoman.ttf") format("opentype");
 }
-
 /* Neue Font Family */
+
+/*Pioggia Font Family */
+@font-face {
+  font-family: "Pioggia";
+  src: url("./assets/fonts/Pioggia/Pioggia.otf") format("opentype");
+}
+/*Pioggia Font Family */
+
 body {
   background-color: #111111;
   color: #e0e0e0;
