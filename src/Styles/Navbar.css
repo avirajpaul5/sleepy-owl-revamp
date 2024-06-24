@@ -1,3 +1,85 @@
 .navbarContainer{
-    height: 10vh;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 15px 0px ;
+    font-family: "Neue-55roman";
+}
+
+.logo{
+    width: 140px;
+    cursor: pointer;
+    padding: 0px 180px;
+}
+
+ul{
+    list-style: none;
+    text-align: center;
+}
+
+ul li{
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 18px;
+    font-weight: lighter;
+    cursor: pointer;
+    padding: 0px 10px;
+    
+}
+
+ul li img{
+    width: 20px;
+    padding: 1px;
+}
+
+.bulk-orders{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.search-box{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background: #ffffff00;
+    padding: 0px 10px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    margin: 15px;
+}
+
+.search-box img{
+    width: 22px;
+}
+
+.search-box input{
+    padding: 6px;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    max-width: 100px;
+}
+
+.search-box input::placeholder{
+    color: #ffffff5e;
+    font-size: 16px;
+}
+
+.cart-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-left: 10px;
+}
+
+.cart-div img{
+    width: 25px;
 }
