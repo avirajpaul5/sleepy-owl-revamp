@@ -1,17 +1,15 @@
 .heroContainer {
-  line-height: 1;
-  height: 60vh;
+  height: 40vh;
   color: #2e2e2e;
   font-weight: 100;
-  text-align: center;
-  font-size: 35vw;
-  /* background-color: red; */
+  font-size: 35em;
   font-family: "Robson-medium";
   user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 30px;
+  margin-top: 15vh;
 }
 .heroContainer :hover {
   color: #d7d5d5;
@@ -24,7 +22,7 @@
   pointer-events: none;
   z-index: 1000;
   opacity: 0;
-  transform: scale(0);
+
 }
 
 .cursor img {
@@ -36,10 +34,12 @@
   display: block;
 }
 
-
-
 .textSpan {
   cursor: pointer;
+  line-height: 50%;
+  height: 30vh;
+
+
 }
 
 .shopButtonsContainer {

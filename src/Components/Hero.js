@@ -37,18 +37,20 @@ const Hero = () => {
 
     gsap.set(cursorRef.current, {
       xPercent: 0,
-      yPercent: -1,
+      yPercent: 1.5,
       scale: 1,
     });
 
     const setCursorX = gsap.quickTo(cursorRef.current, "x", {
       duration: 0.6,
       ease: "expo",
+
     });
 
     const setCursorY = gsap.quickTo(cursorRef.current, "y", {
       duration: 0.6,
       ease: "expo",
+
     });
 
     const handleMouseMove = (e) => {
