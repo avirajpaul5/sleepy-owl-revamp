@@ -1,4 +1,5 @@
 .navbarContainer{
+    height: 200px;
     width: 95%;
     display: flex;
     align-items: center;
@@ -6,6 +7,7 @@
     background: transparent;
     padding: 15px 0px ;
     font-family: "Neue-55roman";
+    z-index: 10000;
 }
 
 .logo{
@@ -83,3 +85,56 @@ ul li img{
 .cart-div img{
     width: 25px;
 }
+
+.dropdownContainer{
+    display: none;
+}
+
+.shop:hover .dropdownContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 1000px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, rgba(111, 58, 2, 0.244), rgba(127, 58, 2, 0.2));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
+    border: 1px solid rgba(111, 58, 2, 0.244);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    z-index: 10000;
+    font-family: "Neue-55roman";
+}
+
+.column-1 ul{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#login{
+    text-decoration: underline;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-underline-offset: 5px;
+}
+
+.dropdown-products ul{
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    line-height: 7px;
+    font-weight: 900;
+}
+
+.description{
+    font-size: 12px;
+    margin-bottom: 25px;
+    font-weight: 100;
+}
+
+
+

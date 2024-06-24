@@ -9,7 +9,48 @@ const Navbar = () => {
   return (
     <div className ="navbarContainer">
       <ul>
-        <li>Shop<img src={arrow}></img></li>
+        <li className='shop'>Shop<img src={arrow}></img>
+        <div className='dropdownContainer'>
+          <div className='column-1'>
+            <ul>
+              <li id='login'>Login / Signup</li>
+              <li>Bulk Orders</li>
+              <li>Blog</li>
+              <li>About-us</li>
+              <li>Reviews</li>
+              <li>Contact-us</li>
+            </ul>
+          </div>
+          <div className='dropdown-products'>
+            <ul>
+              <li>Enamel Mug Combo</li>
+              <li className='description'>Blink and you'll never miss</li>
+              <li>Premium Instant Coffee</li>
+              <li className='description'>Blink and you'll never miss</li>
+              <li>Xpresso: Instant Coffee</li>
+              <li className='description'>Warning: strong coffee</li>
+            </ul>
+          </div>
+          <div className='dropdown-products'>
+          <ul>
+              <li>Cold Brew</li>
+              <li className='description'>Brew Overnight</li>
+              <li>Ground Coffee</li>
+              <li className='description'>Arabica beans</li>
+              <li>Cold Coffee</li>
+              <li className='description'>kick off the summer right</li>
+            </ul>
+          </div>
+          <div className='dropdown-products'>
+          <ul>
+              <li>Coffee Bags</li>
+              <li className='description'>Blink and you'll never miss</li>
+              <li>Merchandise</li>
+              <li className='description'>Perfect companion</li>
+            </ul>
+          </div>
+        </div>
+        </li>
         <li>Instant Coffee<img src={arrow}></img></li>
         <li>BestSellers</li>
       </ul> 
