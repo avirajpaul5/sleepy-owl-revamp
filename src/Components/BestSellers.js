@@ -3,10 +3,13 @@ import "../Styles/BestSellers.css";
 import firstproduct from "../assets/Images/eleventh.png";
 import secondproduct from "../assets/Images/fourth.png";
 import thirdproduct from "../assets/Images/tenth.png";
+import { Link } from "react-router-dom";
 
 const BestSellers = () => {
+  // write JS here!
+
   return (
-    <div className="mainContainer">
+    <div className="mainBestSellerContainer" id="mainBestSellerContainer">
       <div className="titles">
         <div className="coffee-types">
           <h3>Instant Coffee</h3>
@@ -20,54 +23,70 @@ const BestSellers = () => {
         </div>
       </div>
       <div className="productsContainer">
-        <div className="product">
-          <img src={firstproduct} alt="First Product" />
-          <h2>French Vanilla Instant Coffee</h2>
-          <p>
-            Made with 100% Arabica solube crystals, get perfect & super
-            delicious coffee in seconds
-          </p>
-          <div className="priceAndAdd">
-            <h1>
-              ₹550<span className="paise">.00</span>
-            </h1>
-            <h5>
-              <u>+ADD</u>
-            </h5>
+        <Link
+          to="/product-page"
+          style={{ textDecoration: "none", color: "#e0e0e0" }}
+        >
+          <div className="product">
+            <img src={firstproduct} alt="First Product" />
+            <h2>French Vanilla Instant Coffee</h2>
+            <p>
+              Made with 100% Arabica solube crystals, get perfect & super
+              delicious coffee in seconds
+            </p>
+            <div className="priceAndAdd">
+              <h1>
+                ₹550<span className="paise">.00</span>
+              </h1>
+              <h5>
+                <u>+ADD</u>
+              </h5>
+            </div>
           </div>
-        </div>
-        <div className="product">
-          <img src={secondproduct} alt="Second Product" />
-          <h2>Premium Combo</h2>
-          <p>
-            Made with 100% Arabica solube crystals, get perfect & super
-            delicious coffee in seconds
-          </p>
-          <div className="priceAndAdd">
-            <h1>
-              ₹1599<span className="paise">.00</span>
-            </h1>
-            <h5>
-              <u>+ADD</u>
-            </h5>
+        </Link>
+        <Link
+          to="/product-page"
+          style={{ textDecoration: "none", color: "#e0e0e0" }}
+        >
+          <div className="product">
+            <img src={secondproduct} alt="Second Product" />
+            <h2>Premium Combo</h2>
+            <p>
+              Made with 100% Arabica solube crystals, get perfect & super
+              delicious coffee in seconds
+            </p>
+            <div className="priceAndAdd">
+              <h1>
+                ₹1599<span className="paise">.00</span>
+              </h1>
+              <h5>
+                <u>+ADD</u>
+              </h5>
+            </div>
           </div>
-        </div>
-        <div className="product">
-          <img src={thirdproduct} alt="third Product" />
-          <h2>Original Instant Coffee</h2>
-          <p>
-            Made with 100% Arabica solube crystals, get perfect & super
-            delicious coffee in seconds
-          </p>
-          <div className="priceAndAdd">
-            <h1>
-              ₹550<span className="paise">.00</span>
-            </h1>
-            <h5>
-              <u>+ADD</u>
-            </h5>
+        </Link>
+
+        <Link
+          to="/product-page"
+          style={{ textDecoration: "none", color: "#e0e0e0" }}
+        >
+          <div className="product">
+            <img src={thirdproduct} alt="third Product" />
+            <h2>Original Instant Coffee</h2>
+            <p>
+              Made with 100% Arabica solube crystals, get perfect & super
+              delicious coffee in seconds
+            </p>
+            <div className="priceAndAdd">
+              <h1>
+                ₹550<span className="paise">.00</span>
+              </h1>
+              <h5>
+                <u>+ADD</u>
+              </h5>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
     </div>
   );
