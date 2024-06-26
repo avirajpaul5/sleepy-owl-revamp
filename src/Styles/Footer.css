@@ -1,0 +1,127 @@
+.footerContainer{
+    height:70vh;
+    background-image: url(/src/assets/Images/Footer-images/Vector.png);
+    display: flex;
+    font-family: "Neue-55roman";
+}
+
+.footerContainer .left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerContainer .upper{
+    display: flex;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.footerContainer .col{
+    display: flex;
+    margin-right: 20px;
+}
+
+.footerContainer ul{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.footerContainer li{
+    font-family: "Neue-medium";
+    font-weight: 500;
+}
+
+.footerContainer .item{
+    font-size: 16px;
+    margin-bottom: 2px;
+    color: #bfbfbf;
+}
+
+.footerContainer .item:hover {
+    color: white;
+  }
+
+.footerContainer .itemHeader{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footerContainer .logo{
+    padding-left : 60px;
+    margin-top: 50px;
+
+}
+
+.footerContainer .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-right: 50px;
+    /* background-color: #949494; */
+}
+
+.footerContainer .rightText{
+    font-size: 20px;
+    text-align: right;
+    width: 500px;
+    margin-top: 40px;   
+    line-height: 25px;
+    letter-spacing: 0.2px;
+}
+
+.footerContainer .search-box{
+    display: flex;
+    align-items: center;
+    height: 45px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    background: #ffffff00;
+    padding: 0px 10px;
+    border: 1px solid #b4b4b4;
+    border-radius: 50px;
+    margin: 15px;
+    margin-top: 65px;
+}
+
+.footerContainer .search-box input{
+    padding: 6px;
+    background: transparent;
+    color: #ffffff;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    max-width: 100px;
+}
+
+.footerContainer .search-box input::placeholder{
+    color: #ffffff5e;
+    font-size: 16px;
+}
+
+.footerContainer .subscribe{
+    height: 40px;
+    font-family: "Neue-medium";
+    border: none;
+    background-color: transparent;
+    border-radius: 50px;
+    color: white;
+    padding-left: 70px;
+    cursor: pointer;
+}
+
+.footerContainer .loveMsg{
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 60px;
+    color: #d5d5d5;
+}
+
+.footerContainer .love-logo{
+    width: 200px;
+    padding-bottom: 20px;
+}
