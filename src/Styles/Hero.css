@@ -1,6 +1,7 @@
 .heroContainer {
   height: 40vh;
-  color: #2e2e2e;
+  /* color: #2e2e2e; */
+  color: #565555;
   font-weight: 100;
   font-size: 35em;
   font-family: "Robson-medium";
@@ -9,7 +10,7 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 15vh;
+  margin-top: 10vh;
 }
 .heroContainer :hover {
   color: #d7d5d5;
@@ -44,10 +45,9 @@
 
 .shopButtonsContainer {
   display: flex;
-  justify-content: space-between;
-  padding-left: 9em;
-  padding-right: 11em;
-  margin-top: 8em;
+  justify-content: center;
+  gap: 78em;
+  margin-top: 10em;
   height: 15vh;
   font-family: "Neue-55roman";
   text-underline-offset: 5px;

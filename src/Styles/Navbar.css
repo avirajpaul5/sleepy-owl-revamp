@@ -1,22 +1,35 @@
+
+
 .navbarContainer{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding-top: 15px;
+    justify-content: space-between;
+    padding-top: 10px;
     font-family: "Neue-55roman";
     z-index: 10000;
     position: relative;
+    /* background-color: red; */
+    margin-top: 7px;
+}
+
+.leftContainer{
+    padding-left: 40px;
+}
+
+.rightContainer{
+    padding-right: 40px;
 }
 
 .logo{
     width: 140px;
     cursor: pointer;
-    padding: 0px 180px;
+    /* padding: 0px 160px; */
 }
 
 ul{
     list-style: none;
     text-align: center;
+    padding-left: 0;
 }
 
 ul li{
@@ -25,18 +38,25 @@ ul li{
     font-size: 18px;
     font-weight: lighter;
     cursor: pointer;
-    padding: 0px 10px;
-    
+    padding-right: 10px;
+    padding-left: 0px;
+    /* background-color: blue; */
 }
 
-ul li img{
-    width: 20px;
-    padding: 1px;
+.navbarTitle{
+    height: 40px;
 }
 
-.bulk-orders{
-    text-decoration: underline;
-    text-underline-offset: 5px;
+.arrow{
+    width: 15px;
+    padding-left: 4px;
+}
+
+.rightContainer{
+    display: flex;
+    justify-content: space-around;
+    /* align-items; */
+
 }
 
 .search-box{
@@ -47,7 +67,7 @@ ul li img{
     padding: 0px 10px;
     border: 1px solid #fff;
     border-radius: 50px;
-    margin: 15px;
+    margin: 20px 15px;
 }
 
 .search-box img{
@@ -77,7 +97,7 @@ ul li img{
     width: 40px;
     border-radius: 50%;
     border: 1px solid #ebebeb;
-    margin-left: 10px;
+    margin: 20px 15px;
 }
 
 .cart-div img{
@@ -94,14 +114,16 @@ ul li img{
     flex-direction: row;
     justify-content: space-between;
     padding: 20px;
-    width: 1000px;
-    margin-top: 20px;
-    background: linear-gradient(135deg, rgba(111, 58, 2, 0.244), rgba(127, 58, 2, 0.2));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    /* width: 1000px; */
+    margin-top: 10px;
+    /* From https://css.glass */
+    background: rgba(84, 59, 27, 0.58);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(84, 59, 27, 0.188);
     border-radius: 30px;
-    border: 1px solid rgba(111, 58, 2, 0.244);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     z-index: 10000;
     font-family: "Neue-55roman";
 }

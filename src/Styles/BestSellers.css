@@ -1,16 +1,33 @@
 .mainBestSellerContainer {
   margin-top: 50px;
-  /* width: 1530px; */
   height: 100vh;
-  /* background-color: red; */
   font-family: "Neue-55roman";
   scroll-behavior: smooth;
 }
 
 .titles {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: last baseline;
   gap: 15em;
+}
+
+.coffee-btn{
+  display: flex;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: #ffffffaa;
+  font-family: "Neue-medium";
+  font-size: 20px;
+}
+
+.coffee-btn:active {
+  color: #fff;
+}
+
+.coffee-btn:focus{
+  color: #fff;
 }
 
 .coffee-types {
@@ -28,14 +45,18 @@
   margin-right: 60px;
   font-size: 35px;
   font-weight: 900;
+  font-family: "Neue-black";
 }
 
 .productsContainer {
   display: flex;
-  gap: 120px;
+  flex-direction: row;
+  gap: 150px;
   height: 100px;
-  justify-content: center;
-  /* margin-left: 85px; */
+  justify-content: space-between;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding-top: 20px;
 }
 
 .productsContainer img {
