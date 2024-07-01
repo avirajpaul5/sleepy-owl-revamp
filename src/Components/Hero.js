@@ -12,6 +12,8 @@ import Img6 from "../assets/Images/sixth.png";
 import Img7 from "../assets/Images/seventh.png";
 import Img8 from "../assets/Images/eightth.png";
 import Img9 from "../assets/Images/ninth.png";
+import blur from "../assets/Images/blur.png";
+
 
 const Hero = () => {
   const cursorRef = useRef(null);
@@ -120,35 +122,27 @@ const Hero = () => {
         ))}
       </div>
       <div className="heroContainer">
-        {[
-          "S",
-          "L",
-          "E",
-          "E",
-          "P",
-          "Y",
-          " ",
-          " ",
-          " ",
-          "O",
-          "W",
-          "L",
-        ].map((char, i) => (
-          <span
-            key={i}
-            className="textSpan"
-            ref={(el) => (textSpansRef.current[i] = el)}
-          >
-            {char}
-          </span>
-        ))}
+        {["S", "L", "E", "E", "P", "Y", " ", " ", " ", "O", "W", "L"].map(
+          (char, i) => (
+            <span
+              key={i}
+              className="textSpan"
+              ref={(el) => (textSpansRef.current[i] = el)}
+            >
+              {char}
+            </span>
+          )
+        )}
       </div>
       <div className="shopButtonsContainer">
         <p style={{ textDecoration: "underline" }}>Shop Now</p>
         <p>Scroll Down </p>
       </div>
+      {/* <div className="blur"></div> */}
+      <img className="blur" draggable="false" src={blur} alt="blur-background"></img>
     </>
   );
 };
 
 export default Hero;
+

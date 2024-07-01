@@ -12,7 +12,7 @@
   gap: 15em;
 }
 
-.coffee-btn{
+.coffee-btn {
   display: flex;
   border: 0;
   outline: 0;
@@ -26,7 +26,7 @@
   color: #fff;
 }
 
-.coffee-btn:focus{
+.coffee-btn:focus {
   color: #fff;
 }
 
