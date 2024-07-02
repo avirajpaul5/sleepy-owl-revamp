@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/Navbar.css";
 import logo from "../assets/Images/navbar-images/sleepy-owl-Photoroom_1.png";
 import search from "../assets/Images/navbar-images/search.png";
 import cart from "../assets/Images/navbar-images/cart.png";
-import arrow from "../assets/Images/navbar-images/sort-down.png";
 import { HashLink } from "react-router-hash-link";
-
-import { Link } from "react-router-dom";
+import Hamburger from "hamburger-react";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    document.body.style.overflow = menuOpen ? "auto" : "hidden";
+  };
+
   return (
     <div className="navbarContainer">
       <div className="leftContainer">
         <ul>
           <li className="shop navbarTitle">
-            Shop<img src={arrow} className="arrow"></img>
+            Shop
             <div className="dropdownContainer">
               <div className="column-1">
                 <ul>
@@ -56,9 +61,7 @@ const Navbar = () => {
               </div>
             </div>
           </li>
-          <li className="navbarTitle">
-            Instant Coffee<img src={arrow} className="arrow"></img>
-          </li>
+          <li className="navbarTitle">Instant Coffee</li>
           <HashLink
             smooth
             to="/#mainBestSellerContainer"
@@ -69,18 +72,31 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="logoContainer">
-        <img src={logo} alt="logo" className="logo"></img>
+        <img src={logo} alt="logo" className="logo" />
       </div>
       <div className="rightContainer">
         <ul>
           <li className="bulk-orders navbarTitle">BulkOrders</li>
         </ul>
         <div className="search-box">
-          <input type="text" placeholder="Search"></input>
-          <img src={search} alt="search-icon"></img>
+          <input type="text" placeholder="Search" />
+          <img src={search} alt="search-icon" />
         </div>
         <div className="cart-div">
-          <img src={cart} alt="cart-icon" className="cart-icon"></img>
+          <img src={cart} alt="cart-icon" className="cart-icon" />
+        </div>
+        <div className="menuContainer">
+          <Hamburger toggled={menuOpen} toggle={toggleMenu} />
+          {menuOpen && (
+            <div className="menu">
+              <ul>
+                <li>Shop</li>
+                <li>Instant Coffee</li>
+                <li>BestSellers</li>
+                <li>BulkOrders</li>
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </div>
