@@ -11,9 +11,8 @@
   font-size: 2em;
   text-align: center;
 }
-.blur1 {
+.coffee3 {
   position: absolute;
-  top: 40%;
-  right: 45%;
-  scale: 0.7;
+  top: 105vh;
+  left: 80vw;
 }

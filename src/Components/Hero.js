@@ -12,8 +12,8 @@ import Img6 from "../assets/Images/sixth.png";
 import Img7 from "../assets/Images/seventh.png";
 import Img8 from "../assets/Images/eightth.png";
 import Img9 from "../assets/Images/ninth.png";
-import blur from "../assets/Images/blur.png";
-
+import coffee1 from "../assets/Images/hero-images/coffee beans top right hero.png";
+import coffee2 from "../assets/Images/hero-images/coffee beans left hero.png";
 
 const Hero = () => {
   const cursorRef = useRef(null);
@@ -21,7 +21,6 @@ const Hero = () => {
   const textSpansRef = useRef([]);
 
   useEffect(() => {
-
     gsap.from(".heroContainer", {
       duration: 2.5,
       ease: "power4",
@@ -30,12 +29,6 @@ const Hero = () => {
       delay: 0.5,
       stagger: 0.3,
     });
-
-
-
-
-
-
 
     gsap.set(cursorRef.current, {
       xPercent: 0,
@@ -46,13 +39,11 @@ const Hero = () => {
     const setCursorX = gsap.quickTo(cursorRef.current, "x", {
       duration: 0.6,
       ease: "expo",
-
     });
 
     const setCursorY = gsap.quickTo(cursorRef.current, "y", {
       duration: 0.6,
       ease: "expo",
-
     });
 
     const handleMouseMove = (e) => {
@@ -138,11 +129,9 @@ const Hero = () => {
         <p style={{ textDecoration: "underline" }}>Shop Now</p>
         <p>Scroll Down </p>
       </div>
-      {/* <div className="blur"></div> */}
-      <img className="blur" draggable="false" src={blur} alt="blur-background"></img>
-    </>
+      <img className="coffee1" src={coffee1} alt="coffee beans image"></img>
+      <img className="coffee2" src={coffee2} alt="coffee beans image"></img>    </>
   );
 };
 
 export default Hero;
-

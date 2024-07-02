@@ -85,12 +85,15 @@
 /*Pioggia Font Family */
 
 body {
-  background-color: #111111;
+  background-image: url("./assets/Images/bg.png");
+  background-repeat: cover;
+  margin: 0;
+  padding: 0;
   color: #e0e0e0;
   margin: 0;
   overflow-x: hidden;
 }
 
-*{
+* {
   user-select: none;
 }

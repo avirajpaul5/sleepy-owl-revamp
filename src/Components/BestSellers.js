@@ -3,7 +3,6 @@ import "../Styles/BestSellers.css";
 import firstproduct from "../assets/Images/eleventh.png";
 import secondproduct from "../assets/Images/fourth.png";
 import thirdproduct from "../assets/Images/tenth.png";
-import blur2 from "../assets/Images/blur.png";
 import { Link } from "react-router-dom";
 
 const BestSellers = () => {

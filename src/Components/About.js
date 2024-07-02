@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/About.css";
-import blur1 from "../assets/Images/blur.png";
+import coffee3 from "../assets/Images/about-images/coffee beans about right.png";
 
 const About = () => {
   return (
@@ -11,7 +11,7 @@ const About = () => {
           long making coffee that is as good as it can be in every single cup."
         </p>
       </div>
-      <img className="blur1" src={blur1} alt="blur background"></img>
+      <img className="coffee3" src={coffee3} alt="coffee beans image"></img>
     </>
   );
 };
