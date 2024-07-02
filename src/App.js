@@ -18,13 +18,13 @@ const App = () => {
         <Navbar />
         <Hero />
         {/* Add components here ⬇️ */}
-        <Recog/>
-        <About/>
-        <BestSellers/>
-        <Products/>
-        <Merch/>
-        <Reviews/>
-        <Footer/>
+        <Recog />
+        <About />
+        <BestSellers />
+        <Products />
+        <Merch />
+        {/* <Reviews/> */}
+        <Footer />
       </div>
     </ReactLenis>
     // Smooth Scrolling (Don't Touch)

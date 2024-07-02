@@ -8,29 +8,29 @@ const Footer = () => {
       <div className="footerContainer">
         <div className="left">
           <div className="upper">
-            <div class="col">
+            <div className="col">
               <ul>
-                <li class="itemHeader">Coffee</li>
-                <li class="item">Incredible Deal</li>
-                <li class="item">Premium Instant</li>
-                <li class="item">Cold Brew</li>
-                <li class="item">5-Minute Bag</li>
-                <li class="item">Arabica Beans</li>
-                <li class="item">Ready to Drink</li>
+                <li className="itemHeader">Coffee</li>
+                <li className="item">Incredible Deal</li>
+                <li className="item">Premium Instant</li>
+                <li className="item">Cold Brew</li>
+                <li className="item">5-Minute Bag</li>
+                <li className="item">Arabica Beans</li>
+                <li className="item">Ready to Drink</li>
               </ul>
             </div>
-            <div class="col">
+            <div className="col">
               <ul>
-                <li class="itemHeader">Sleepy Owl</li>
-                <li class="item">Reviews</li>
-                <li class="item">About Us</li>
-                <li class="item">Sustain Pack</li>
-                <li class="item">Return</li>
-                <li class="item">Contact-us</li>
-                <li class="item">Terms of Use</li>
-                <li class="item">Compliance</li>
-                <li class="item">Blog</li>
-                <li class="item">Sitemap</li>
+                <li className="itemHeader">Sleepy Owl</li>
+                <li className="item">Reviews</li>
+                <li className="item">About Us</li>
+                <li className="item">Sustain Pack</li>
+                <li className="item">Return</li>
+                <li className="item">Contact-us</li>
+                <li className="item">Terms of Use</li>
+                <li className="item">Compliance</li>
+                <li className="item">Blog</li>
+                <li className="item">Sitemap</li>
               </ul>
             </div>
 

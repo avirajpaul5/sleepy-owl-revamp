@@ -113,8 +113,8 @@ const Hero = () => {
         ))}
       </div>
       <div className="heroContainer">
-        {["S", "L", "E", "E", "P", "Y", " ", " ", " ", "O", "W", "L"].map(
-          (char, i) => (
+        <div className="wordContainer">
+          {["S", "L", "E", "E", "P", "Y"].map((char, i) => (
             <span
               key={i}
               className="textSpan"
@@ -122,15 +122,27 @@ const Hero = () => {
             >
               {char}
             </span>
-          )
-        )}
+          ))}
+        </div>
+        <div className="wordContainer">
+          {["O", "W", "L"].map((char, i) => (
+            <span
+              key={i + 6}
+              className="textSpan"
+              ref={(el) => (textSpansRef.current[i + 6] = el)}
+            >
+              {char}
+            </span>
+          ))}
+        </div>
       </div>
       <div className="shopButtonsContainer">
         <p style={{ textDecoration: "underline" }}>Shop Now</p>
         <p>Scroll Down </p>
       </div>
       <img className="coffee1" src={coffee1} alt="coffee beans image"></img>
-      <img className="coffee2" src={coffee2} alt="coffee beans image"></img>    </>
+      <img className="coffee2" src={coffee2} alt="coffee beans image"></img>
+    </>
   );
 };
 
