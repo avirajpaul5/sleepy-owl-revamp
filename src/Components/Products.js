@@ -94,42 +94,36 @@ const App = () => {
         onTouchMove={(e) => handleOnMove(e.touches[0])}
       >
         {/* all the images have hyperlinks and for now they're directed to yt. intend to direct it to sleepy owl's original product page */}
-        <a className="link" href="https://www.youtube.com/" draggable="false">
+        <a className="link" href="" draggable="false">
           <img className="image" draggable="false" src={img1} />
         </a>
-        <a className="link" href="https://www.youtube.com/" draggable="false">
+        <a className="link" href="" draggable="false">
           <img className="image" draggable="false" src={img2} />
         </a>
-        <a className="link" href="https://www.youtube.com/" draggable="false">
+        <a className="link" href="" draggable="false">
           <img className="image" draggable="false" src={img3} />
         </a>
-        <a className="link" href="https://www.youtube.com/" draggable="false">
+        <a className="link" href="" draggable="false">
           <img className="image" draggable="false" src={img4} />
         </a>
-        <a className="link" href="https://www.youtube.com/" draggable="false">
+        <a className="link" href="" draggable="false">
           <img className="image" draggable="false" src={img5} />
         </a>
-        <a className="link" href="https://www.youtube.com/" draggable="false">
+        <a className="link" href="" draggable="false">
           <img className="image" draggable="false" src={img6} />
         </a>
-        <a className="link" href="https://www.youtube.com/" draggable="false">
+        <a className="link" href="" draggable="false">
           <img className="image" draggable="false" src={img7} />
         </a>
-        <a className="link" href="https://www.youtube.com/" draggable="false">
+        <a className="link" href="" draggable="false">
           <img className="image" draggable="false" src={img8} />
         </a>
-        <a className="link" href="https://www.youtube.com/" draggable="false">
+        <a className="link" href="" draggable="false">
           <img className="image" draggable="false" src={img10} />
         </a>
-        <a className="link" href="https://www.youtube.com/" draggable="false">
+        <a className="link" href="" draggable="false">
           <img className="image" draggable="false" src={img9} />
         </a>
-      </div>
-      <div className="lower-arrows-body">
-        <div className="arrow1"> </div>
-        <div className="arrow1"> </div>
-        <div className="arrow1"> </div>
-        {/* TODO add a message asking the user to drag */}
       </div>
     </div>
   );
