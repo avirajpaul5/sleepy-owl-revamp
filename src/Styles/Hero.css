@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:50px;
+  gap: 50px;
   margin-top: 10vh;
 }
 .heroContainer :hover {
@@ -89,7 +89,7 @@
 @media (max-width: 1200px) {
   .heroContainer {
     font-size: 35vw;
-    gap: 30px;  
+    gap: 30px;
   }
 }
 @media (max-width: 900px) {
