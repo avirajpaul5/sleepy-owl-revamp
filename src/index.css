@@ -15,7 +15,7 @@
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: #6d6d6d;
-  cursor: default !important;
+  cursor: pointer !important;
 }
 /* Custom ScrollBar Ends */
 

@@ -16,6 +16,7 @@ import coffee1 from "../assets/Images/hero-images/coffee beans top right hero.pn
 import coffee2 from "../assets/Images/hero-images/coffee beans left hero.png";
 
 const Hero = () => {
+  
   const cursorRef = useRef(null);
   const cursorMediasRef = useRef([]);
   const textSpansRef = useRef([]);
