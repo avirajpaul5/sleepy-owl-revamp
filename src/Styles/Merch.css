@@ -16,3 +16,11 @@
   object-fit: contain;
 }
 
+.Merch {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 60px;
+  font-size: 35px;
+  font-weight: 900;
+  font-family: "Neue-black";
+}

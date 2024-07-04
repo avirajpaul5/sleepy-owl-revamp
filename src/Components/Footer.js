@@ -1,5 +1,5 @@
-import React from 'react'
-import "../Styles/Footer.css"
+import React from "react";
+import "../Styles/Footer.css";
 import logo from "../assets/Images/navbar-images/sleepy-owl-Photoroom_1.png";
 import LoveLogo from "../assets/Images/Footer-images/Group 10.png";
 const Footer = () => {
@@ -33,16 +33,19 @@ const Footer = () => {
                 <li className="item">Sitemap</li>
               </ul>
             </div>
-
           </div>
           <div className="lower">
             <img src={logo} alt="logo" className="logo"></img>
           </div>
-
         </div>
         <div className="right">
           <div className="rightupper">
-            <h1 className='rightText'>Our journey started with three friends with a shared vision. It was simple- introduce people to real good coffee. Today, we’re making high-quality, freshly roasted coffee accessible to everyone with our exclusive products.</h1>
+            <h1 className="rightText">
+              Our journey started with three friends with a shared vision. It
+              was simple- introduce people to real good coffee. Today, we’re
+              making high-quality, freshly roasted coffee accessible to everyone
+              with our exclusive products.
+            </h1>
           </div>
           <div className="rightmiddle">
             <div className="search-box">
@@ -51,13 +54,13 @@ const Footer = () => {
             </div>
           </div>
           <div className="rightbottom">
-            <p className='loveMsg'>Made with love</p>
+            <p className="loveMsg">Made with love</p>
             <img src={LoveLogo} alt="love-logo" className="love-logo"></img>
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

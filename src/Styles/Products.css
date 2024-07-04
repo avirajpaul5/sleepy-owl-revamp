@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   gap: 10vmin;
-  margin-top: 50vh;
+  margin-top: 35vh;
   user-select: none;
   transform: translate(0%, -50%);
   user-select: none;
@@ -11,14 +11,23 @@
 #image-track:hover {
   cursor: grab;
 }
-#image-track > .link > .image:hover {
+#image-track > .image:hover {
   cursor: grab;
 }
 
-#image-track > .link > .image {
+#image-track > .image {
   scale: 1.2;
   width: 30vmin;
   height: 50vmin;
   object-fit: cover;
   object-position: 100% center;
+}
+
+.Products {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 60px;
+  font-size: 35px;
+  font-weight: 900;
+  font-family: "Neue-black";
 }

@@ -34,7 +34,7 @@ const App = () => {
     const nextPercentageUnconstrained =
       prevPercentage - (mouseDelta / maxDelta) * 100;
     const nextPercentage = Math.max(
-      Math.min(nextPercentageUnconstrained, 30), //changed from 10 to 30
+      Math.min(nextPercentageUnconstrained, 10), //changed from 10 to 30
       -90
     );
 
@@ -81,6 +81,11 @@ const App = () => {
 
   return (
     <div className="p">
+      <div className="Products">
+        <p>
+          <strong>Products.</strong>
+        </p>
+      </div>
       <div
         id="image-track"
         data-mouse-down-at="0"
@@ -93,37 +98,16 @@ const App = () => {
         a
         onTouchMove={(e) => handleOnMove(e.touches[0])}
       >
-        {/* all the images have hyperlinks and for now they're directed to yt. intend to direct it to sleepy owl's original product page */}
-        <a className="link" href="" draggable="false">
-          <img className="image" draggable="false" src={img1} />
-        </a>
-        <a className="link" href="" draggable="false">
-          <img className="image" draggable="false" src={img2} />
-        </a>
-        <a className="link" href="" draggable="false">
-          <img className="image" draggable="false" src={img3} />
-        </a>
-        <a className="link" href="" draggable="false">
-          <img className="image" draggable="false" src={img4} />
-        </a>
-        <a className="link" href="" draggable="false">
-          <img className="image" draggable="false" src={img5} />
-        </a>
-        <a className="link" href="" draggable="false">
-          <img className="image" draggable="false" src={img6} />
-        </a>
-        <a className="link" href="" draggable="false">
-          <img className="image" draggable="false" src={img7} />
-        </a>
-        <a className="link" href="" draggable="false">
-          <img className="image" draggable="false" src={img8} />
-        </a>
-        <a className="link" href="" draggable="false">
-          <img className="image" draggable="false" src={img10} />
-        </a>
-        <a className="link" href="" draggable="false">
-          <img className="image" draggable="false" src={img9} />
-        </a>
+        <img className="image" draggable="false" src={img1} />
+        <img className="image" draggable="false" src={img2} />
+        <img className="image" draggable="false" src={img3} />
+        <img className="image" draggable="false" src={img4} />
+        <img className="image" draggable="false" src={img5} />
+        <img className="image" draggable="false" src={img6} />
+        <img className="image" draggable="false" src={img7} />
+        <img className="image" draggable="false" src={img8} />
+        <img className="image" draggable="false" src={img10} />
+        <img className="image" draggable="false" src={img9} />
       </div>
     </div>
   );
