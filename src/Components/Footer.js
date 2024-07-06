@@ -14,10 +14,14 @@ const Footer = () => {
         </div>
         <div className="rightFooterContainer">
           <div className="socialButtons">
-            <button>Twitter</button>
-            <button>Instagram</button>
-            <button>Facebook</button>
-            <button>LinkedIn</button>
+            <div className="firstTwoBtn">
+              <button>Twitter</button>
+              <button>Instagram</button>
+            </div>
+            <div className="secondTwoBtn">
+              <button>Facebook</button>
+              <button>LinkedIn</button>
+            </div>
           </div>
           <div className="footerimg">
             <img src={footerimg} alt="footer-img"></img>

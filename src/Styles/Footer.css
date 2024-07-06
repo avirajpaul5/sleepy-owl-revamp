@@ -1,23 +1,21 @@
-.mainFooterContainer{
+.mainFooterContainer {
   font-family: "Neue-55roman";
   display: flex;
   justify-content: space-between;
   padding: 2em 4em;
   height: 80vh;
-  /* margin-bottom: 12em; */
   gap: 40em;
-  /* background-color: blue; */
   background-image: url(../assets/Images/Footer-images/Vector.png);
 }
 
-.mainFooterContainer h1{
+.mainFooterContainer h1 {
   font-weight: 100;
   font-size: 12em;
   font-family: "Robson-medium";
   line-height: 10px;
 }
 
-.rightFooterContainer{
+.rightFooterContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -25,7 +23,7 @@
   padding-bottom: 9.5em;
 }
 
-.socialButtons{
+.socialButtons, .firstTwoBtn, .secondTwoBtn {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -33,11 +31,10 @@
   justify-content: center;
 }
 
-.socialButtons button{
+.socialButtons button {
   background: rgba(255, 255, 255, 0);
   color: white;
   font-size: 18px;
-  /* height: 30px; */
   border-radius: 35px;
   border: 0.5px solid rgba(255, 255, 255, 0.395);
   outline: none;
@@ -45,20 +42,66 @@
   padding: 0.6em;
   display: flex;
   justify-content: center;
-
 }
 
-.footerimg{
+.footerimg {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.footerimg img{
+.footerimg img {
   width: 8em;
 }
 
-.leftFooterContainer p{
+.leftFooterContainer p {
   width: 250px;
-  color: #585858
+  color: #585858;
+}
+
+/* Add media queries for responsiveness */
+@media (max-width: 992px) {
+  .mainFooterContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    height: auto;
+  }
+
+  .leftFooterContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .leftFooterContainer h3, hr {
+    width: 100%;
+  }
+
+  .leftFooterContainer p{
+    width: 250px;
+    color: #585858;
+  }
+
+  .rightFooterContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .socialButtons {
+    flex-direction: row;
+    gap: 1em;
+    padding-right: 30px;
+  }
+
+  .footerimg {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+  }
 }
