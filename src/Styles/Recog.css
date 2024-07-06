@@ -1,38 +1,52 @@
-.RecognisedContainer{
+.RecognisedContainer {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  height: 50px;
+  font-family: Neue Haas Grotesk Display Pro;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  color: #a4a4a4;
+}
+
+.RecognisedImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 130px;
+  height: 100px;
+}
+
+.Brand1 {
+  width: 70px;
+}
+.Brand2 {
+  width: 160px;
+}
+.Brand3 {
+  width: 100px;
+  margin-top: 5px;
+}
+.Brand4 {
+  width: 40px;
+}
+
+@media (max-width: 1200px) {
+  .RecognisedImages {
     display: flex;
-    align-items: start;
-    justify-content: center;
-    height: 50px;
-    font-family: Neue Haas Grotesk Display Pro;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-size: 1em;
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    color: #a4a4a4;
-
+    flex-direction: row;
+    gap: 100px;
+  }
 }
-
-.RecognisedImages{
+@media (max-width: 900px) {
+  .RecognisedImages {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 130px;
-    height: 100px;
-}
+    flex-direction: row;
+    gap: 100px;
 
-.Brand1{
-    width: 70px;
+  }
 }
-.Brand2{
-    width: 160px;
-}
-.Brand3{
-    width: 100px;
-    margin-top: 5px;
-}
-.Brand4{
-    width: 40px;
-}
-
