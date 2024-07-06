@@ -39,14 +39,14 @@ const Hero = () => {
       duration: 2.5,
       ease: "power4",
       opacity: 0,
-      delay: 2,
+      delay: 1.6,
       stagger: 0.3,
     });
     gsap.from(".coffee2", {
       duration: 2.5,
       ease: "power4",
       opacity: 0,
-      delay: 2,
+      delay: 1.8,
       stagger: 0.3,
     });
 

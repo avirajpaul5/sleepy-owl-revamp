@@ -131,7 +131,7 @@ const BestSellers = () => {
         >
           {products[key].map((product, index) => (
             <Link
-              to="/product-page"
+              // to="/product-page"
               style={{ textDecoration: "none", color: "#e0e0e0" }}
               key={index}
             >

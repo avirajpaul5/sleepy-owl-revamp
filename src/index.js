@@ -13,7 +13,7 @@ root.render(
     <Router basename="/">
       <Routes>
         <Route path="/" element={<App />} />
-        <Route exact path="/product-page" element={<ProductPage />} />
+        {/* <Route exact path="/product-page" element={<ProductPage />} /> */}
         <Route exact path="*" element={<PageNotFound />} />
       </Routes>
     </Router>
