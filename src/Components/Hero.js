@@ -35,6 +35,26 @@ const Hero = () => {
       yPercent: 1.5,
       scale: 1,
     });
+    gsap.from(".coffee1", {
+      duration: 2.5,
+      ease: "power4",
+      opacity: 0,
+      delay: 2,
+      stagger: 0.3,
+    });
+    gsap.from(".coffee2", {
+      duration: 2.5,
+      ease: "power4",
+      opacity: 0,
+      delay: 2,
+      stagger: 0.3,
+    });
+
+    gsap.set(cursorRef.current, {
+      xPercent: 0,
+      yPercent: 1.5,
+      scale: 1,
+    });
 
     const setCursorX = gsap.quickTo(cursorRef.current, "x", {
       duration: 0.6,

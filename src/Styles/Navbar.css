@@ -156,8 +156,12 @@ ul li {
   .navbarContainer {
     justify-content: space-between;
     padding: 10px;
+    color: #f1f1f1;
+
 
   }
+
+
 
   .menuContainer {
     display: flex;
@@ -184,7 +188,7 @@ ul li {
     z-index: 1000;
     font-family: "Neue-black";
   }
-
+ 
   .menu ul {
     list-style: none;
     padding: 100px;
@@ -198,7 +202,6 @@ ul li {
   .menu ul li {
     margin: 20px 0;
     font-size: 24px;
-    color: white;
     cursor: pointer;
   }
 

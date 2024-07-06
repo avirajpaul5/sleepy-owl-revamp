@@ -59,9 +59,11 @@
 .coffee1 {
   top: -2vh;
   left: 70vw;
+  opacity: 0.8;
 }
 .coffee2 {
   top: 25vh;
+  opacity: 0.8;
 }
 
 .wordContainer {
@@ -107,7 +109,6 @@
   .shopButtonsContainer {
     display: inline;
     justify-content: center;
-
   }
   .mobileAboutText {
     display: none;
