@@ -81,7 +81,7 @@ const Merch = () => {
           ref={addToRefs}
         />
         <img
-          src="https://sleepyowl.co/cdn/shop/files/shop_2.png?v=1630526888"
+          src="https://sleepyowl.co/cdn/sh  op/files/shop_2.png?v=1630526888"
           alt="Image 6"
           className="Merchimage image2"
           ref={addToRefs}
