@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    document.body.style.overflow = menuOpen ? "auto" : "hidden";
+    document.body.style.overflow = menuOpen ? "hidden" : "hidden";
   };
 
   return (

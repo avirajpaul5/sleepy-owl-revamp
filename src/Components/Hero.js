@@ -16,7 +16,6 @@ import coffee1 from "../assets/Images/hero-images/coffee beans top right hero.pn
 import coffee2 from "../assets/Images/hero-images/coffee beans left hero.png";
 
 const Hero = () => {
-  
   const cursorRef = useRef(null);
   const cursorMediasRef = useRef([]);
   const textSpansRef = useRef([]);
@@ -138,6 +137,10 @@ const Hero = () => {
         </div>
       </div>
       <div className="shopButtonsContainer">
+        <p className="mobileAboutText">
+          Sleepy Owl is a homegrown Indian coffee brand. We spend inordinately
+          long making coffee that is as good as it can be in every single cup.
+        </p>
         <p style={{ textDecoration: "underline" }}>Shop Now</p>
         <p>Scroll Down </p>
       </div>
