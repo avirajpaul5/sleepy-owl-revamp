@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 2em 4em;
-  height: 89vh;
+  height: 75vh;
   gap: 40em;
   background-image: url(../assets/Images/Footer-images/Vector.png);
 }
@@ -21,6 +21,7 @@
   justify-content: space-between;
   margin-top: 30px;
   padding-bottom: 9.5em;
+  gap:20px;
 }
 
 .socialButtons, .firstTwoBtn, .secondTwoBtn {
@@ -61,13 +62,18 @@
 }
 
 /* Add media queries for responsiveness */
-@media (max-width: 992px) {
+@media (max-width: 812px) {
   .mainFooterContainer {
-    flex-direction: column;
+    flex-direction: row;
+    position: relative;
+    top: 14em;
     align-items: center;
     gap: 2em;
     padding: 2em;
-    height: auto;
+    height: 120vh;
+    background-image: url("../assets/Images/Footer-images/footerBgMobile.png") ;
+    background-repeat: no-repeat;
+    background-size: 50em 60em;
   }
 
   .leftFooterContainer {

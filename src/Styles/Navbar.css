@@ -157,11 +157,7 @@ ul li {
     justify-content: space-between;
     padding: 10px;
     color: #f1f1f1;
-
-
   }
-
-
 
   .menuContainer {
     display: flex;
@@ -171,7 +167,8 @@ ul li {
   .menu {
     position: fixed;
     top: 40px;
-    left: 50px;
+    left: 15em;
+
     /* height: 100%; */
     overflow-x: hidden !important ;
     width: 30rem;
@@ -183,12 +180,11 @@ ul li {
     border: 1px solid rgba(84, 59, 27, 0.188);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     z-index: 1000;
     font-family: "Neue-black";
   }
- 
+
   .menu ul {
     list-style: none;
     padding: 100px;

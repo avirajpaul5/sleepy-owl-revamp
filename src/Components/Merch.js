@@ -49,6 +49,11 @@ const Merch = () => {
           <strong>Merch.</strong>
         </p>
       </div>
+      <div className="leftMerchText">
+        <p>
+          Pick from a great range of coffees and merchandise on our shop ....
+        </p>
+      </div>
       <div className="image-container">
         <img
           src="https://sleepyowl.co/cdn/shop/files/shop_1.png?v=1630526867"

@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <img className="footercoffeebeans" src={footercoffeebeans} alt="coffee beans image"></img>
+      {/* <img className="footercoffeebeans" src={footercoffeebeans} alt="coffee beans image"></img> */}
     </>
   );
 };
