@@ -16,3 +16,9 @@
   top: 105vh;
   left: 80vw;
 }
+
+@media(max-width: 768px){
+  .coffee3{
+    display: none;
+  }
+}

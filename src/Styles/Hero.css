@@ -130,6 +130,7 @@
   .shopButtonsContainer :nth-child(3) {
     display: none;
   }
+  
   .shopButtonsContainer {
     display: inline;
     justify-content: center;
