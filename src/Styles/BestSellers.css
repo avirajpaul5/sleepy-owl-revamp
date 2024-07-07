@@ -77,7 +77,7 @@
   font-size: 12px;
   font-weight: lighter;
   width: 250px;
-  color: #A2A2A2;
+  color: #a2a2a2;
 }
 
 .product h2 {
@@ -86,7 +86,7 @@
 
 .paise {
   font-size: 20px;
-  color: #A2A2A2;
+  color: #a2a2a2;
 }
 
 .priceAndAdd {
@@ -97,4 +97,18 @@
 
 .priceAndAdd h5 {
   text-underline-offset: 5px;
+}
+
+@media (max-width: 1200px) {
+  .productsContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mainBestSellerContainer{
+    height: 220vh;
+    gap:0;
+    }
+
+}
+@media (max-width: 900px) {
 }

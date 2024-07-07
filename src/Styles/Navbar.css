@@ -150,7 +150,6 @@ ul li {
 
 /* Responsive Styles */
 @media (max-width: 1000px) {
-
   .leftContainer,
   .rightContainer ul,
   .rightContainer .search-box {
@@ -161,21 +160,24 @@ ul li {
     justify-content: space-between;
     padding: 10px;
     color: #f1f1f1;
+    
   }
 
   .menuContainer {
     display: flex;
     align-items: center;
+
+
   }
 
   .menu {
     position: fixed;
     top: 40px;
-    left: 15em;
+    left: 2em;
 
     /* height: 100%; */
     overflow-x: hidden !important;
-    width: 30rem;
+    width: 23rem;
     background: rgba(84, 59, 27, 0.58);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -186,7 +188,7 @@ ul li {
     flex-direction: column;
     justify-content: flex-end;
     z-index: 1000;
-    font-family: "Neue-black";
+    font-family: "Neue-medium";
   }
 
   .menu ul {
