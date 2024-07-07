@@ -1,7 +1,6 @@
 import React from "react";
 import "../Styles/Footer.css";
 import footerimg from "../assets/Images/Footer-images/Group 10.png";
-import footercoffeebeans from "../assets/Images/Footer-images/footer coffee bean.png";
 
 const Footer = () => {
   return (
@@ -19,12 +18,36 @@ const Footer = () => {
         <div className="rightFooterContainer">
           <div className="socialButtons">
             <div className="firstTwoBtn">
-              <button>Twitter</button>
-              <button>Instagram</button>
+              <a
+                className="socialslink"
+                href="https://twitter.com/sleepyowlcoffee"
+                target="_blank"
+              >
+                <button>Twitter</button>
+              </a>
+              <a
+                className="socialslink"
+                href="https://www.instagram.com/sleepyowlcoffee"
+                target="_blank"
+              >
+                <button>Instagram</button>
+              </a>
             </div>
             <div className="secondTwoBtn">
-              <button>Facebook</button>
-              <button>LinkedIn</button>
+              <a
+                className="socialslink"
+                href="https://www.facebook.com/sleepyowlcoffee"
+                target="_blank"
+              >
+                <button>Facebook</button>
+              </a>
+              <a
+                className="socialslink"
+                href="https://www.youtube.com/channel/UCOC4AAvD10lxvVdnkFW51KQ"
+                target="_blank"
+              >
+                <button>Youtube</button>
+              </a>
             </div>
           </div>
           <div className="footerimg">
@@ -33,7 +56,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      {/* <img className="footercoffeebeans" src={footercoffeebeans} alt="coffee beans image"></img> */}
     </>
   );
 };
