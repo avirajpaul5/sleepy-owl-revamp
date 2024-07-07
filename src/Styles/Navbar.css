@@ -54,19 +54,21 @@ ul li {
   align-items: center;
   background: #ffffff00;
   padding: 0px 10px;
-  border: 1px solid #fff;
-  border-radius: 50px;
+  border-radius: 36.35px;
+  border: 0.957px solid #8b8b8b;
   margin: 20px 15px;
 }
 
 .search-box img {
   width: 22px;
+  opacity: 50%;
 }
 
 .search-box input {
+  font-family: "Neue-light";
   padding: 6px;
   background: transparent;
-  color: #d1d1d1;
+  color: #7c7c7c;
   border: 0;
   outline: none;
   font-size: 18px;
@@ -85,12 +87,13 @@ ul li {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: 1px solid #ebebeb;
+  border: 1px solid #828282;
   margin: 20px 15px;
 }
 
 .cart-div img {
   width: 25px;
+  opacity: 90%;
 }
 
 .dropdownContainer {
@@ -147,6 +150,7 @@ ul li {
 
 /* Responsive Styles */
 @media (max-width: 1000px) {
+
   .leftContainer,
   .rightContainer ul,
   .rightContainer .search-box {
@@ -170,7 +174,7 @@ ul li {
     left: 15em;
 
     /* height: 100%; */
-    overflow-x: hidden !important ;
+    overflow-x: hidden !important;
     width: 30rem;
     background: rgba(84, 59, 27, 0.58);
     border-radius: 16px;
