@@ -18,6 +18,9 @@
   cursor: pointer !important;
 }
 /* Custom ScrollBar Ends */
+* {
+  cursor: none;
+}
 
 /* Robson Font Family */
 @font-face {
