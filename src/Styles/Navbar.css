@@ -97,12 +97,7 @@ ul li {
 }
 
 .dropdownContainer {
-  display: none;
-}
-
-.shop:hover .dropdownContainer {
   position: absolute;
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
@@ -114,6 +109,9 @@ ul li {
   border: 1px solid rgba(84, 59, 27, 0.188);
   z-index: 10000;
   font-family: "Neue-55roman";
+  /* Initial state will be set by GSAP */
+  display: none;
+  opacity: 0;
 }
 
 .column-1 ul {
@@ -160,14 +158,11 @@ ul li {
     justify-content: space-between;
     padding: 10px;
     color: #f1f1f1;
-    
   }
 
   .menuContainer {
     display: flex;
     align-items: center;
-
-
   }
 
   .menu {
