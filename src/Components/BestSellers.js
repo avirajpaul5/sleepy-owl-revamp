@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Styles/BestSellers.css";
 import firstproduct from "../assets/Images/eleventh.png";
 import secondproduct from "../assets/Images/fourth.png";
@@ -14,6 +14,18 @@ import { Link } from "react-router-dom";
 
 const BestSellers = () => {
   const [activeProduct, setActiveProduct] = useState("instant-coffee");
+  const [fadeOut, setFadeOut] = useState(false);
+
+  // Handle smooth transition between categories
+  const handleCategoryChange = (category) => {
+    if (category === activeProduct) return;
+
+    setFadeOut(true);
+    setTimeout(() => {
+      setActiveProduct(category);
+      setFadeOut(false);
+    }, 300);
+  };
 
   const products = {
     "instant-coffee": [
@@ -21,21 +33,21 @@ const BestSellers = () => {
         img: firstproduct,
         title: "French Vanilla Instant Coffee",
         description:
-          "Made with 100% Arabica solube crystals, get perfect & super delicious coffee in seconds",
+          "Made with 100% Arabica soluble crystals, get perfect & super delicious coffee in seconds",
         price: "₹550",
       },
       {
         img: secondproduct,
         title: "Premium Combo",
         description:
-          "Made with 100% Arabica solube crystals, get perfect & super delicious coffee in seconds",
+          "Made with 100% Arabica soluble crystals, get perfect & super delicious coffee in seconds",
         price: "₹1599",
       },
       {
         img: thirdproduct,
         title: "Original Instant Coffee",
         description:
-          "Made with 100% Arabica solube crystals, get perfect & super delicious coffee in seconds",
+          "Made with 100% Arabica soluble crystals, get perfect & super delicious coffee in seconds",
         price: "₹550",
       },
     ],
@@ -50,8 +62,7 @@ const BestSellers = () => {
       {
         img: coldBrew2,
         title: "French Vanilla Cold Brew",
-        description:
-          "A hint of natural sweetness that comes from Vanilla",
+        description: "A hint of natural sweetness that comes from Vanilla",
         price: "₹600",
       },
       {
@@ -95,7 +106,7 @@ const BestSellers = () => {
             className={`coffee-btn ${
               activeProduct === "instant-coffee" ? "active" : ""
             }`}
-            onClick={() => setActiveProduct("instant-coffee")}
+            onClick={() => handleCategoryChange("instant-coffee")}
           >
             Instant Coffee
           </button>
@@ -103,7 +114,7 @@ const BestSellers = () => {
             className={`coffee-btn ${
               activeProduct === "cold-brew" ? "active" : ""
             }`}
-            onClick={() => setActiveProduct("cold-brew")}
+            onClick={() => handleCategoryChange("cold-brew")}
           >
             Cold Brew
           </button>
@@ -111,7 +122,7 @@ const BestSellers = () => {
             className={`coffee-btn ${
               activeProduct === "hot-brew" ? "active" : ""
             }`}
-            onClick={() => setActiveProduct("hot-brew")}
+            onClick={() => handleCategoryChange("hot-brew")}
           >
             Hot Brew
           </button>
@@ -127,7 +138,10 @@ const BestSellers = () => {
           key={key}
           className="productsContainer"
           id={key}
-          style={{ display: activeProduct === key ? "flex" : "none" }}
+          style={{
+            display: activeProduct === key ? "flex" : "none",
+            opacity: fadeOut ? 0 : 1,
+          }}
         >
           {products[key].map((product, index) => (
             <Link
@@ -137,13 +151,18 @@ const BestSellers = () => {
             >
               <div className="product">
                 <img src={product.img} alt={product.title} />
-                <h2>{product.title}</h2>
-                <p style={{color:"#A2A2A2"}}>{product.description}</p>
+                <div className="product-info">
+                  <h2>{product.title}</h2>
+                  <p>{product.description}</p>
+                </div>
                 <div className="priceAndAdd">
-                  <h1>{product.price}<span style={{color:"#A2A2A2" ,fontSize:"20px"}}>.00</span></h1>
-                  <h5>
-                    <u>+ADD</u>
-                  </h5>
+                  <h1>
+                    {product.price}
+                    <span style={{ color: "#A2A2A2", fontSize: "20px" }}>
+                      .00
+                    </span>
+                  </h1>
+                  <button className="add-button">+ ADD</button>
                 </div>
               </div>
             </Link>
