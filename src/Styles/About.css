@@ -1,24 +1,51 @@
 .aboutPara {
   font-family: "Pioggia";
-  width: 50vw;
   margin: auto;
   width: 50%;
+  max-width: 1200px;
   padding: 10px;
   margin-top: 80px;
 }
 
 .aboutPara p {
-  font-size: 2em;
+  font-size: clamp(1.5em, 2vw, 2.5em);
   text-align: center;
 }
 .coffee3 {
   position: absolute;
   top: 105vh;
   left: 80vw;
+  max-width: 100%;
+  height: auto;
+  width: clamp(200px, 25vw, 500px);
 }
 
-@media(max-width: 768px){
-  .coffee3{
+@media (max-width: 768px) {
+  .coffee3 {
     display: none;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1201px) {
+  .coffee3 {
+    top: 110vh;
+    left: 80vw;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1601px) {
+  .coffee3 {
+    top: 115vh;
+    left: 82vw;
+  }
+}
+
+/* Ultra wide screens */
+@media (min-width: 1921px) {
+  .coffee3 {
+    top: 120vh;
+    left: 85vw;
   }
 }

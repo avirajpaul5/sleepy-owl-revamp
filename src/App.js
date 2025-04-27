@@ -9,11 +9,15 @@ import Products from "./Components/Products";
 import Merch from "./Components/Merch";
 import Reviews from "./Components/Reviews";
 import Footer from "./Components/Footer";
+import "./Styles/App.css";
 
 const App = () => {
   return (
     // Smooth Scrolling (Don't Touch)
-    <ReactLenis root>
+    <ReactLenis
+      root
+      options={{ smoothWheel: true, lerp: 0.1, wheelMultiplier: 0.8 }}
+    >
       <div className="container">
         <Navbar />
         <Hero />
