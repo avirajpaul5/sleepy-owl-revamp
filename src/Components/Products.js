@@ -16,34 +16,83 @@ import "../Styles/Products.css";
 const App = () => {
   // Refs for DOM elements
   const trackRef = useRef(null);
+  const dragMessageRef = useRef(null);
 
   // State for tracking drag position and percentages
   const [mouseDownAt, setMouseDownAt] = useState(0);
   const [prevPercentage, setPrevPercentage] = useState(0);
   const [percentage, setPercentage] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [showDragMessage, setShowDragMessage] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   // Event handlers for mouse/touch interactions
   const handleOnDown = (e) => {
     // Get clientX from either mouse or touch event
     const clientX =
       e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+    const clientY =
+      e.clientY || (e.touches && e.touches[0] ? e.touches[0].clientY : 0);
+
     setMouseDownAt(clientX);
     setIsDragging(true);
+    setShowDragMessage(false); // Hide drag message when dragging starts
+    setMousePosition({ x: clientX, y: clientY });
   };
 
   const handleOnUp = () => {
     setIsDragging(false);
     setPrevPercentage(percentage);
     setMouseDownAt(0);
+
+    // Show drag message again after dragging ends if mouse is still over the track
+    const trackElement = trackRef.current;
+    if (trackElement) {
+      const trackRect = trackElement.getBoundingClientRect();
+      if (
+        mousePosition.x >= trackRect.left &&
+        mousePosition.x <= trackRect.right &&
+        mousePosition.y >= trackRect.top &&
+        mousePosition.y <= trackRect.bottom
+      ) {
+        setShowDragMessage(true);
+      }
+    }
   };
 
   const handleOnMove = (e) => {
-    if (!isDragging) return;
-
     // Get clientX from either mouse or touch event
     const clientX =
       e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+    const clientY =
+      e.clientY || (e.touches && e.touches[0] ? e.touches[0].clientY : 0);
+
+    setMousePosition({ x: clientX, y: clientY });
+
+    // Update drag message position
+    if (dragMessageRef.current && showDragMessage) {
+      dragMessageRef.current.style.left = `${clientX}px`;
+      dragMessageRef.current.style.top = `${clientY}px`;
+    }
+
+    if (!isDragging) {
+      // Check if mouse is over the track
+      const trackElement = trackRef.current;
+      if (trackElement) {
+        const trackRect = trackElement.getBoundingClientRect();
+        if (
+          clientX >= trackRect.left &&
+          clientX <= trackRect.right &&
+          clientY >= trackRect.top &&
+          clientY <= trackRect.bottom
+        ) {
+          setShowDragMessage(true);
+        } else {
+          setShowDragMessage(false);
+        }
+      }
+      return;
+    }
 
     // If no valid clientX or no mouseDownAt value, return early
     if (!clientX || mouseDownAt === 0) return;
@@ -115,7 +164,14 @@ const App = () => {
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("touchmove", handleTouchMove);
     };
-  }, [percentage, prevPercentage, mouseDownAt, isDragging]);
+  }, [
+    percentage,
+    prevPercentage,
+    mouseDownAt,
+    isDragging,
+    showDragMessage,
+    mousePosition,
+  ]);
 
   // Initialize track position on first render
   useEffect(() => {
@@ -153,6 +209,34 @@ const App = () => {
         <img className="image" draggable="false" src={img10} alt="Product 9" />
         <img className="image" draggable="false" src={img9} alt="Product 10" />
       </div>
+      {showDragMessage && (
+        <div
+          className="drag-cursor"
+          ref={dragMessageRef}
+          style={{
+            left: `${mousePosition.x}px`,
+            top: `${mousePosition.y}px`,
+          }}
+        >
+          <div className="drag-ring">
+            <svg viewBox="0 0 100 100" className="ring-svg">
+              <defs>
+                <path
+                  id="textPath"
+                  d="M 50,50 m 0,-40 a 40,40 0 1,1 0,80 a 40,40 0 1,1 0,-80"
+                  fill="none"
+                />
+              </defs>
+              <path stroke="rgba(255,255,255,0.2)" strokeWidth="0.5" />
+              <text className="ring-text">
+                <textPath href="#textPath" startOffset="0%">
+                  DRAG ○ DRAG ○ DRAG ○ DRAG ○ DRAG ○ DRAG ○ DRAG ○
+                </textPath>
+              </text>
+            </svg>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

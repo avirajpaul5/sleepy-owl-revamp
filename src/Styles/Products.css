@@ -23,6 +23,52 @@
   cursor: grab;
 }
 
+/* Drag cursor styling */
+.drag-cursor {
+  position: fixed;
+  pointer-events: none; /* Allows clicking through the message */
+  transform: translate(-50%, -50%); /* Center on cursor */
+  z-index: 1000;
+  user-select: none;
+  width: 150px;
+  height: 150px;
+}
+
+.drag-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: rotate 15s linear infinite;
+}
+
+.ring-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.ring-text {
+  fill: black;
+  font-size: 12px;
+  font-weight: 1000;
+  font-family: "Neue-medium";   
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  dominant-baseline: hanging;
+  mix-blend-mode: difference;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 #image-track > .image {
   scale: 1.2;
   width: 30vmin;
