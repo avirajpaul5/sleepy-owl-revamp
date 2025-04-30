@@ -150,7 +150,9 @@ const BestSellers = () => {
               key={index}
             >
               <div className="product">
-                <img src={product.img} alt={product.title} />
+                <div className="product-image-container">
+                  <img src={product.img} alt={product.title} />
+                </div>
                 <div className="product-info">
                   <h2>{product.title}</h2>
                   <p>{product.description}</p>
