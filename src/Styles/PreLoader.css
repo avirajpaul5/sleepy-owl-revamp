@@ -1,0 +1,80 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999; /* Increased z-index to be higher than navbar (10000) */
+  pointer-events: none;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.preloader-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e1e; /* Dark background matching the site's theme */
+  background-image: url("../assets/Images/bg.png"); /* Using the same background as the main site */
+  background-repeat: repeat-y;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto; /* Enable pointer events on the overlay */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.preloader-logo {
+  width: 200px;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+  position: relative;
+  z-index: 2;
+}
+
+/* Coffee circle animation */
+.coffee-circle {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(84, 59, 27, 0.3); /* Coffee color with transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.coffee-circle-inner {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(84, 59, 27, 0.5); /* Darker coffee color */
+  box-shadow: 0 0 20px rgba(84, 59, 27, 0.7);
+}
+
+@media (max-width: 768px) {
+  .preloader-logo {
+    width: 150px;
+  }
+
+  .coffee-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .coffee-circle-inner {
+    width: 170px;
+    height: 170px;
+  }
+}
