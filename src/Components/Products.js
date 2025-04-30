@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+// Imports React and image assets
+import React, { useState, useEffect, useRef } from "react";
 import img1 from "../assets/Images/first.png";
 import img2 from "../assets/Images/second.png";
 import img3 from "../assets/Images/third.png";
@@ -11,73 +12,122 @@ import img9 from "../assets/Images/first.png";
 import img10 from "../assets/Images/second.png";
 import "../Styles/Products.css";
 
+// Main component (named App but exported as default)
 const App = () => {
-  const [mouseDownAt, setMouseDownAt] = useState(null);
+  // Refs for DOM elements
+  const trackRef = useRef(null);
+
+  // State for tracking drag position and percentages
+  const [mouseDownAt, setMouseDownAt] = useState(0);
   const [prevPercentage, setPrevPercentage] = useState(0);
   const [percentage, setPercentage] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
 
+  // Event handlers for mouse/touch interactions
   const handleOnDown = (e) => {
-    setMouseDownAt(e.clientX);
+    // Get clientX from either mouse or touch event
+    const clientX =
+      e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+    setMouseDownAt(clientX);
+    setIsDragging(true);
   };
 
   const handleOnUp = () => {
-    setMouseDownAt(0);
+    setIsDragging(false);
     setPrevPercentage(percentage);
+    setMouseDownAt(0);
   };
 
   const handleOnMove = (e) => {
-    if (mouseDownAt === 0) return;
+    if (!isDragging) return;
 
-    const mouseDelta = mouseDownAt - e.clientX;
+    // Get clientX from either mouse or touch event
+    const clientX =
+      e.clientX || (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
+
+    // If no valid clientX or no mouseDownAt value, return early
+    if (!clientX || mouseDownAt === 0) return;
+
+    const mouseDelta = parseFloat(mouseDownAt) - clientX;
     const maxDelta = window.innerWidth / 2;
 
     const nextPercentageUnconstrained =
       prevPercentage - (mouseDelta / maxDelta) * 100;
     const nextPercentage = Math.max(
-      Math.min(nextPercentageUnconstrained, 10), //changed from 10 to 30
+      Math.min(nextPercentageUnconstrained, 10),
       -90
     );
 
     setPercentage(nextPercentage);
 
-    const track = document.getElementById("image-track");
-    if (track) {
-      track.style.transform = `translate(${nextPercentage}%, -50%)`;
+    // Apply animations only if we have a valid track reference
+    if (trackRef.current) {
+      // Use a single animation approach for consistency
+      trackRef.current.animate(
+        {
+          transform: `translate(${nextPercentage}%, -50%)`,
+        },
+        { duration: 800, fill: "forwards", easing: "ease-out" }
+      );
 
-      const images = track.getElementsByClassName("image");
+      // Apply the style directly as well for browsers that might not support animate
+      trackRef.current.style.transform = `translate(${nextPercentage}%, -50%)`;
+
+      // Update all images
+      const images = trackRef.current.getElementsByClassName("image");
       for (const image of images) {
+        image.animate(
+          {
+            objectPosition: `${100 + nextPercentage}% center`,
+          },
+          { duration: 800, fill: "forwards", easing: "ease-out" }
+        );
+
+        // Apply the style directly as well
         image.style.objectPosition = `${100 + nextPercentage}% center`;
       }
     }
-
-    track.animate(
-      {
-        transform: `translate(${nextPercentage}%, -50%)`,
-      },
-      { duration: 1200, fill: "forwards" }
-    );
-
-    for (const image of track.getElementsByClassName("image")) {
-      image.animate(
-        {
-          objectPosition: `${100 + nextPercentage}% center`,
-        },
-        { duration: 1200, fill: "forwards" }
-      );
-    }
   };
 
-  window.onmousedown = (e) => handleOnDown(e);
+  // Set up event listeners with useEffect for proper cleanup
+  useEffect(() => {
+    const handleMouseDown = (e) => handleOnDown(e);
+    const handleTouchStart = (e) => handleOnDown(e);
+    const handleMouseUp = () => handleOnUp();
+    const handleTouchEnd = () => handleOnUp();
+    const handleMouseMove = (e) => handleOnMove(e);
+    const handleTouchMove = (e) => handleOnMove(e);
 
-  window.ontouchstart = (e) => handleOnDown(e.touches[0]);
+    // Add event listeners
+    window.addEventListener("mousedown", handleMouseDown);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("mouseup", handleMouseUp);
+    window.addEventListener("touchend", handleTouchEnd);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove);
 
-  window.onmouseup = (e) => handleOnUp(e);
+    // Cleanup function to remove event listeners when component unmounts
+    return () => {
+      window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("touchend", handleTouchEnd);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, [percentage, prevPercentage, mouseDownAt, isDragging]);
 
-  window.ontouchend = (e) => handleOnUp(e.touches[0]);
+  // Initialize track position on first render
+  useEffect(() => {
+    if (trackRef.current) {
+      trackRef.current.style.transform = `translate(${percentage}%, -50%)`;
 
-  window.onmousemove = (e) => handleOnMove(e);
-
-  window.ontouchmove = (e) => handleOnMove(e.touches[0]);
+      const images = trackRef.current.getElementsByClassName("image");
+      for (const image of images) {
+        image.style.objectPosition = `${100 + percentage}% center`;
+      }
+    }
+  }, []);
 
   return (
     <div className="p">
@@ -88,26 +138,20 @@ const App = () => {
       </div>
       <div
         id="image-track"
-        data-mouse-down-at="0"
-        data-prev-percentage="0"
-        onMouseDown={handleOnDown}
-        onTouchStart={(e) => handleOnDown(e.touches[0])}
-        onMouseUp={handleOnUp}
-        onTouchEnd={(e) => handleOnUp(e.touches[0])}
-        onMouseMove={handleOnMove}
-        a
-        onTouchMove={(e) => handleOnMove(e.touches[0])}
+        ref={trackRef}
+        className={isDragging ? "dragging" : ""}
       >
-        <img className="image" draggable="false" src={img1} />
-        <img className="image" draggable="false" src={img2} />
-        <img className="image" draggable="false" src={img3} />
-        <img className="image" draggable="false" src={img4} />
-        <img className="image" draggable="false" src={img5} />
-        <img className="image" draggable="false" src={img6} />
-        <img className="image" draggable="false" src={img7} />
-        <img className="image" draggable="false" src={img8} />
-        <img className="image" draggable="false" src={img10} />
-        <img className="image" draggable="false" src={img9} />
+        {/* Multiple images displayed in the track */}
+        <img className="image" draggable="false" src={img1} alt="Product 1" />
+        <img className="image" draggable="false" src={img2} alt="Product 2" />
+        <img className="image" draggable="false" src={img3} alt="Product 3" />
+        <img className="image" draggable="false" src={img4} alt="Product 4" />
+        <img className="image" draggable="false" src={img5} alt="Product 5" />
+        <img className="image" draggable="false" src={img6} alt="Product 6" />
+        <img className="image" draggable="false" src={img7} alt="Product 7" />
+        <img className="image" draggable="false" src={img8} alt="Product 8" />
+        <img className="image" draggable="false" src={img10} alt="Product 9" />
+        <img className="image" draggable="false" src={img9} alt="Product 10" />
       </div>
     </div>
   );

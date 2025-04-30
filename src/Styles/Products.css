@@ -13,6 +13,12 @@
 #image-track:hover {
   cursor: grab;
 }
+#image-track.dragging {
+  cursor: grabbing !important;
+}
+#image-track.dragging > .image {
+  cursor: grabbing !important;
+}
 #image-track > .image:hover {
   cursor: grab;
 }
