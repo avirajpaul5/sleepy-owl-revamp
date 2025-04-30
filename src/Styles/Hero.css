@@ -194,15 +194,18 @@
       15vw,
       30rem
     ); /* Adjusted font size for ultra-wide */
+    max-width: 2400px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .coffee1 {
     top: 10vh;
-    left: 75vw;
+    left: 70%;
     width: clamp(250px, 20vw, 450px); /* Adjusted size */
   }
   .coffee2 {
     top: 40vh;
-    left: 15vw;
+    left: 15%;
     width: clamp(250px, 20vw, 450px); /* Adjusted size */
   }
   .textSpan {
@@ -211,6 +214,7 @@
   .shopButtonsContainer {
     margin-top: 5em;
     max-width: 80%; /* Reduced width for better proportions */
+    font-size: 1.1em;
   }
 }
 
@@ -221,15 +225,16 @@
     margin-top: 5vh;
     font-size: clamp(15rem, 12vw, 35rem); /* Further adjusted font size */
     gap: clamp(30px, 2vw, 60px); /* Increased gap between words */
+    max-width: 2800px;
   }
   .coffee1 {
     top: 15vh;
-    left: 72vw;
+    left: 70%;
     width: clamp(300px, 18vw, 500px); /* Adjusted size */
   }
   .coffee2 {
     top: 45vh;
-    left: 18vw;
+    left: 18%;
     width: clamp(300px, 18vw, 500px); /* Adjusted size */
   }
   .textSpan {
@@ -239,5 +244,35 @@
     margin-top: 6em;
     max-width: 70%; /* Further reduced width for better proportions */
     font-size: 1.2em; /* Slightly larger text */
+  }
+}
+
+/* Super ultra wide screens */
+@media (min-width: 3440px) {
+  .heroContainer {
+    height: 65vh;
+    margin-top: 5vh;
+    font-size: clamp(18rem, 10vw, 40rem); /* Further adjusted font size */
+    gap: clamp(40px, 2vw, 80px); /* Increased gap between words */
+    max-width: 3200px;
+  }
+  .coffee1 {
+    top: 15vh;
+    left: 70%;
+    width: clamp(350px, 15vw, 600px); /* Adjusted size */
+  }
+  .coffee2 {
+    top: 45vh;
+    left: 20%;
+    width: clamp(350px, 15vw, 600px); /* Adjusted size */
+  }
+  .textSpan {
+    height: 50vh;
+  }
+  .shopButtonsContainer {
+    margin-top: 7em;
+    max-width: 60%; /* Further reduced width for better proportions */
+    font-size: 1.4em; /* Larger text */
+    gap: 3em;
   }
 }

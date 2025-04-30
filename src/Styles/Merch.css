@@ -86,7 +86,71 @@
   }
 }
 
+/* Large screens */
+@media (min-width: 1440px) {
+  .image-container {
+    height: 90vh;
+    max-width: 1400px;
+  }
+
+  .Merchimage {
+    height: 280px;
+    width: 450px;
+  }
+
+  .Merch {
+    font-size: 35px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .image2,
+  .image3 {
+    width: 380px;
+    height: 380px;
+  }
+
+  .leftMerchText {
+    font-size: 18px;
+    width: 300px;
+    margin-left: 60px;
+  }
+}
+
 /* Extra large screens */
+@media (min-width: 1921px) {
+  .image-container {
+    height: 95vh;
+    max-width: 2400px;
+  }
+
+  .Merchimage {
+    height: 350px;
+    width: 550px;
+  }
+
+  .Merch {
+    font-size: 40px;
+    max-width: 2400px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .image2,
+  .image3 {
+    width: 450px;
+    height: 450px;
+  }
+
+  .leftMerchText {
+    font-size: 20px;
+    width: 320px;
+    margin-left: 80px;
+  }
+}
+
+/* Ultra wide screens */
 @media (min-width: 2401px) {
   .image-container {
     height: 100vh;
@@ -101,6 +165,8 @@
   .Merch {
     font-size: 45px;
     max-width: 2800px;
+    margin: 0 auto;
+    padding: 0 60px;
   }
 
   .image2,
@@ -112,5 +178,38 @@
   .leftMerchText {
     font-size: 22px;
     width: 350px;
+    margin-left: 100px;
+  }
+}
+
+/* Super ultra wide screens */
+@media (min-width: 3440px) {
+  .image-container {
+    height: 110vh;
+    max-width: 3200px;
+  }
+
+  .Merchimage {
+    height: 450px;
+    width: 650px;
+  }
+
+  .Merch {
+    font-size: 50px;
+    max-width: 3200px;
+    margin: 0 auto;
+    padding: 0 80px;
+  }
+
+  .image2,
+  .image3 {
+    width: 550px;
+    height: 550px;
+  }
+
+  .leftMerchText {
+    font-size: 24px;
+    width: 400px;
+    margin-left: 120px;
   }
 }

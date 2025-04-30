@@ -33,7 +33,13 @@ const App = () => {
       {/* Smooth Scrolling (Don't Touch) */}
       <ReactLenis
         root
-        options={{ smoothWheel: true, lerp: 0.1, wheelMultiplier: 0.8 }}
+        options={{
+          smoothWheel: true,
+          lerp: 0.1,
+          wheelMultiplier: 0.8,
+          gestureOrientation: "vertical",
+        }}
+        className="lenis-container"
       >
         <div className="container">
           <Navbar />
@@ -45,8 +51,9 @@ const App = () => {
           <Products />
           <Merch />
           {/* <Reviews/> */}
-          <Footer />
         </div>
+        {/* Footer outside container for full width */}
+        <Footer />
       </ReactLenis>
       {/* Smooth Scrolling (Don't Touch) */}
     </>

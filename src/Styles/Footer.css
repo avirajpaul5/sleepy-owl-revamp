@@ -5,15 +5,21 @@
   background-repeat: no-repeat;
   background-position: center;
   color: white;
-  padding: 2em;
   min-height: 90vh;
   position: relative;
   display: flex;
   justify-content: space-between;
+  width: 100vw;
+  padding: 2em;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
 }
 
 .leftFooterContainer {
   max-width: 50%;
+  padding-left: 0;
 }
 
 .leftFooterContainer input {
@@ -140,11 +146,38 @@
 }
 
 /* Large screens */
+@media (min-width: 1440px) {
+  .mainFooterContainer {
+    width: 100vw;
+    padding: 2em calc((100vw - 1400px) / 2 + 30px);
+  }
+
+  .leftFooterContainer h1 {
+    font-size: 9em;
+  }
+
+  .rightFooterContainer {
+    padding-right: 40px;
+  }
+
+  .socialButtons {
+    gap: 25px;
+  }
+
+  .socialButtons button {
+    font-size: 1.1em;
+  }
+
+  .footerimg img {
+    width: 180px;
+  }
+}
+
+/* Extra large screens */
 @media (min-width: 1921px) {
   .mainFooterContainer {
-    max-width: 2400px;
-    margin: 0 auto;
-    padding: 0 60px;
+    width: 100vw;
+    padding: 2em calc((100vw - 2400px) / 2 + 60px);
   }
 
   .leftFooterContainer h1 {
@@ -168,18 +201,23 @@
   }
 }
 
-/* Extra large screens */
+/* Ultra wide screens */
 @media (min-width: 2401px) {
   .mainFooterContainer {
-    max-width: 2800px;
+    width: 100vw;
+    padding: 2em calc((100vw - 2800px) / 2 + 60px);
   }
 
   .leftFooterContainer h1 {
     font-size: 12em;
   }
 
+  .rightFooterContainer {
+    padding-right: 80px;
+  }
+
   .socialButtons {
-    gap: 40px;
+    gap: 35px;
   }
 
   .socialButtons button {
@@ -187,6 +225,34 @@
   }
 
   .footerimg img {
-    width: 250px;
+    width: 220px;
+  }
+}
+
+/* Super ultra wide screens */
+@media (min-width: 3440px) {
+  .mainFooterContainer {
+    width: 100vw;
+    padding: 2em calc((100vw - 3200px) / 2 + 80px);
+  }
+
+  .leftFooterContainer h1 {
+    font-size: 14em;
+  }
+
+  .rightFooterContainer {
+    padding-right: 100px;
+  }
+
+  .socialButtons {
+    gap: 40px;
+  }
+
+  .socialButtons button {
+    font-size: 1.6em;
+  }
+
+  .footerimg img {
+    width: 240px;
   }
 }

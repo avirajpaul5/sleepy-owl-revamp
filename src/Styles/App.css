@@ -1,22 +1,54 @@
+/* Lenis container styles */
+.lenis-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 /* App container styles */
 .container {
   width: 100%;
   margin: 0 auto;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding: 0 20px; /* Add default padding */
 }
 
-/* Responsive container for larger screens */
-@media (min-width: 1921px) {
+/* Large screens */
+@media (min-width: 1440px) {
   .container {
-    max-width: 2400px;
+    max-width: 1400px;
     margin: 0 auto; /* Center the container */
+    padding: 0 30px; /* Increase padding */
   }
 }
 
 /* Extra large screens */
+@media (min-width: 1921px) {
+  .container {
+    max-width: 2400px;
+    margin: 0 auto; /* Center the container */
+    padding: 0 40px; /* Increase padding */
+    font-size: 1.1em; /* Slightly increase base font size */
+  }
+}
+
+/* Ultra wide screens */
 @media (min-width: 2401px) {
   .container {
     max-width: 2800px;
     margin: 0 auto;
+    padding: 0 60px; /* Further increase padding */
+    font-size: 1.2em; /* Further increase base font size */
+  }
+}
+
+/* Super ultra wide screens */
+@media (min-width: 3440px) {
+  .container {
+    max-width: 3200px;
+    margin: 0 auto;
+    padding: 0 80px; /* Maximum padding */
+    font-size: 1.3em; /* Maximum base font size */
   }
 }

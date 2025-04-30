@@ -250,6 +250,64 @@
 }
 
 /* Large screens */
+@media (min-width: 1440px) {
+  .mainBestSellerContainer {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .titles {
+    max-width: 1300px;
+    margin: 0 auto 30px;
+    gap: 15em;
+  }
+
+  .coffee-types {
+    margin-left: 0;
+    font-size: 1.1em;
+    gap: 80px;
+  }
+
+  .bestseller {
+    margin-right: 0;
+    font-size: 35px;
+  }
+
+  .productsContainer {
+    max-width: 1300px;
+    gap: 40px;
+    padding: 20px 0;
+  }
+
+  .product {
+    width: 350px;
+    height: 520px;
+  }
+
+  .product-image-container {
+    height: 350px;
+  }
+
+  .product h2 {
+    font-size: 24px;
+  }
+
+  .product p {
+    font-size: 15px;
+  }
+
+  .priceAndAdd h1 {
+    font-size: 28px;
+  }
+
+  .add-button {
+    padding: 7px 14px;
+    font-size: 15px;
+  }
+}
+
+/* Extra large screens */
 @media (min-width: 1921px) {
   .mainBestSellerContainer {
     max-width: 2400px;
@@ -292,6 +350,7 @@
   .productsContainer img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
   }
 
   .product h2 {
@@ -312,7 +371,7 @@
   }
 }
 
-/* Extra large screens */
+/* Ultra wide screens */
 @media (min-width: 2401px) {
   .mainBestSellerContainer {
     max-width: 2800px;
@@ -349,6 +408,7 @@
   .productsContainer img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
   }
 
   .product h2 {
@@ -366,5 +426,63 @@
   .add-button {
     padding: 10px 20px;
     font-size: 18px;
+  }
+}
+
+/* Super ultra wide screens */
+@media (min-width: 3440px) {
+  .mainBestSellerContainer {
+    max-width: 3200px;
+  }
+
+  .titles {
+    max-width: 3000px;
+    gap: 30em;
+  }
+
+  .coffee-types {
+    font-size: 1.6em;
+    gap: 150px;
+  }
+
+  .bestseller {
+    font-size: 50px;
+  }
+
+  .productsContainer {
+    max-width: 3000px;
+    gap: 100px;
+  }
+
+  .product {
+    width: 500px;
+    height: 720px;
+  }
+
+  .product-image-container {
+    height: 500px;
+  }
+
+  .productsContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product h2 {
+    font-size: 32px;
+  }
+
+  .product p {
+    font-size: 20px;
+  }
+
+  .priceAndAdd h1 {
+    font-size: 36px;
+  }
+
+  .add-button {
+    padding: 12px 24px;
+    font-size: 20px;
   }
 }
