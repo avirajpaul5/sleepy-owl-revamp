@@ -138,3 +138,55 @@
     margin-top: 0;
   }
 }
+
+/* Large screens */
+@media (min-width: 1921px) {
+  .mainFooterContainer {
+    max-width: 2400px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  .leftFooterContainer h1 {
+    font-size: 10em;
+  }
+
+  .rightFooterContainer {
+    padding-right: 60px;
+  }
+
+  .socialButtons {
+    gap: 30px;
+  }
+
+  .socialButtons button {
+    font-size: 1.2em;
+  }
+
+  .footerimg img {
+    width: 200px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 2401px) {
+  .mainFooterContainer {
+    max-width: 2800px;
+  }
+
+  .leftFooterContainer h1 {
+    font-size: 12em;
+  }
+
+  .socialButtons {
+    gap: 40px;
+  }
+
+  .socialButtons button {
+    font-size: 1.4em;
+  }
+
+  .footerimg img {
+    width: 250px;
+  }
+}

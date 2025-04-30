@@ -6,6 +6,8 @@
   user-select: none;
   transform: translate(0%, -50%);
   user-select: none;
+  max-width: 100%; /* Ensure it doesn't cause horizontal scrolling */
+  padding: 0 20px; /* Add some padding */
 }
 
 #image-track:hover {
@@ -30,4 +32,43 @@
   font-size: 35px;
   font-weight: 900;
   font-family: "Neue-medium";
+  max-width: 2400px; /* Match container max-width */
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+/* Large screens */
+@media (min-width: 1921px) {
+  #image-track {
+    gap: 15vmin;
+    margin-top: 30vh;
+  }
+
+  #image-track > .image {
+    width: 35vmin;
+    height: 55vmin;
+  }
+
+  .Products {
+    font-size: 40px;
+    max-width: 2400px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 2401px) {
+  #image-track {
+    gap: 20vmin;
+    margin-top: 25vh;
+  }
+
+  #image-track > .image {
+    width: 40vmin;
+    height: 60vmin;
+  }
+
+  .Products {
+    font-size: 45px;
+    max-width: 2800px;
+  }
 }

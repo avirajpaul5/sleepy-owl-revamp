@@ -1,11 +1,14 @@
 .image-container {
   height: 80vh;
-  width: 100vw;
+  width: 100%; /* Changed from 100vw to prevent horizontal scrolling */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   margin-bottom: 7em;
+  max-width: 2400px; /* Match container max-width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Merchimage {
@@ -24,6 +27,10 @@
   font-size: 35px;
   font-weight: 900;
   font-family: "Neue-medium";
+  max-width: 2400px; /* Match container max-width */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 60px;
 }
 
 .image2 {
@@ -45,4 +52,65 @@
   padding-left: 50px;
   width: 250px;
   font-family: "Neue-55roman";
+  max-width: 2400px; /* Match container max-width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Large screens */
+@media (min-width: 1921px) {
+  .image-container {
+    height: 90vh;
+    max-width: 2400px;
+  }
+
+  .Merchimage {
+    height: 350px;
+    width: 550px;
+  }
+
+  .Merch {
+    font-size: 40px;
+    max-width: 2400px;
+  }
+
+  .image2,
+  .image3 {
+    width: 450px;
+    height: 450px;
+  }
+
+  .leftMerchText {
+    font-size: 20px;
+    width: 300px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 2401px) {
+  .image-container {
+    height: 100vh;
+    max-width: 2800px;
+  }
+
+  .Merchimage {
+    height: 400px;
+    width: 600px;
+  }
+
+  .Merch {
+    font-size: 45px;
+    max-width: 2800px;
+  }
+
+  .image2,
+  .image3 {
+    width: 500px;
+    height: 500px;
+  }
+
+  .leftMerchText {
+    font-size: 22px;
+    width: 350px;
+  }
 }

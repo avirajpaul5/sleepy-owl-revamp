@@ -87,6 +87,7 @@
 body {
   background-image: url("./assets/Images/bg.png");
   background-repeat: repeat-y;
+  background-size: cover; /* Ensure background covers the entire viewport */
   margin: 0;
   padding: 0;
   color: #e0e0e0;
@@ -94,8 +95,17 @@ body {
   width: 100%;
   user-select: none;
   min-height: 100vh;
+  box-sizing: border-box; /* Include padding and border in element's width and height */
 }
 html {
   overflow-x: hidden;
   width: 100%;
+  box-sizing: border-box;
+}
+
+/* Apply box-sizing to all elements */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }

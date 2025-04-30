@@ -36,16 +36,53 @@
 
 /* Extra large screens */
 @media (min-width: 1601px) {
+  .aboutPara {
+    max-width: 1400px;
+  }
+
+  .aboutPara p {
+    font-size: clamp(1.8em, 2vw, 2.8em);
+  }
+
   .coffee3 {
     top: 115vh;
     left: 82vw;
+    width: clamp(250px, 22vw, 450px);
   }
 }
 
 /* Ultra wide screens */
 @media (min-width: 1921px) {
+  .aboutPara {
+    max-width: 1800px;
+    width: 45%;
+  }
+
+  .aboutPara p {
+    font-size: clamp(2em, 1.8vw, 3em);
+  }
+
   .coffee3 {
     top: 120vh;
     left: 85vw;
+    width: clamp(300px, 20vw, 500px);
+  }
+}
+
+/* Super ultra wide screens */
+@media (min-width: 2401px) {
+  .aboutPara {
+    max-width: 2200px;
+    width: 40%;
+  }
+
+  .aboutPara p {
+    font-size: clamp(2.2em, 1.5vw, 3.2em);
+  }
+
+  .coffee3 {
+    top: 125vh;
+    left: 85vw;
+    width: clamp(350px, 18vw, 550px);
   }
 }

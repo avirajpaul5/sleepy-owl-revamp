@@ -189,19 +189,55 @@
   .heroContainer {
     height: 55vh;
     margin-top: 5vh;
+    font-size: clamp(
+      10rem,
+      15vw,
+      30rem
+    ); /* Adjusted font size for ultra-wide */
   }
   .coffee1 {
     top: 10vh;
-    left: 80vw;
+    left: 75vw;
+    width: clamp(250px, 20vw, 450px); /* Adjusted size */
   }
   .coffee2 {
     top: 40vh;
     left: 15vw;
+    width: clamp(250px, 20vw, 450px); /* Adjusted size */
   }
   .textSpan {
     height: 40vh;
   }
   .shopButtonsContainer {
     margin-top: 5em;
+    max-width: 80%; /* Reduced width for better proportions */
+  }
+}
+
+/* Super ultra wide screens */
+@media (min-width: 2401px) {
+  .heroContainer {
+    height: 60vh;
+    margin-top: 5vh;
+    font-size: clamp(15rem, 12vw, 35rem); /* Further adjusted font size */
+    gap: clamp(30px, 2vw, 60px); /* Increased gap between words */
+  }
+  .coffee1 {
+    top: 15vh;
+    left: 72vw;
+    width: clamp(300px, 18vw, 500px); /* Adjusted size */
+  }
+  .coffee2 {
+    top: 45vh;
+    left: 18vw;
+    width: clamp(300px, 18vw, 500px); /* Adjusted size */
+  }
+  .textSpan {
+    height: 45vh;
+  }
+  .shopButtonsContainer {
+    margin-top: 6em;
+    max-width: 70%; /* Further reduced width for better proportions */
+    font-size: 1.2em; /* Slightly larger text */
   }
 }

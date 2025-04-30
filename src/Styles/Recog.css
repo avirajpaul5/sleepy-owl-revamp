@@ -47,8 +47,61 @@
   .RecognisedImages {
     display: flex;
     flex-direction: row;
-
     gap: 100px;
+  }
+}
 
+/* Large screens */
+@media (min-width: 1921px) {
+  .RecognisedContainer {
+    max-width: 2400px;
+    margin: 60px auto 30px;
+    font-size: 1.4em;
+  }
+
+  .RecognisedImages {
+    max-width: 2400px;
+    margin: 0 auto;
+    gap: 180px;
+  }
+
+  .Brand1 {
+    width: 90px;
+  }
+  .Brand2 {
+    width: 200px;
+  }
+  .Brand3 {
+    width: 130px;
+  }
+  .Brand4 {
+    width: 55px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 2401px) {
+  .RecognisedContainer {
+    max-width: 2800px;
+    margin: 80px auto 40px;
+    font-size: 1.6em;
+  }
+
+  .RecognisedImages {
+    max-width: 2800px;
+    gap: 220px;
+  }
+
+  .Brand1 {
+    width: 110px;
+  }
+  .Brand2 {
+    width: 240px;
+  }
+  .Brand3 {
+    width: 160px;
+  }
+  .Brand4 {
+    width: 70px;
   }
 }
