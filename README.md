@@ -1,6 +1,6 @@
 # Sleepy Owl Coffee Brand Website
 
-![Sleepy Owl Logo](public/logo.png)
+![Sleepy Owl Logo](src/assets/Images/navbar-images/sleepy-owl-Photoroom_1.png)
 
 A modern, interactive website for Sleepy Owl, a homegrown Indian coffee brand. This project is a revamp of their existing website with enhanced UI/UX and interactive elements.
 
